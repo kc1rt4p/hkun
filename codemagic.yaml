@@ -8,6 +8,9 @@ workflows:
       cocoapods: default
       java: 1.8
       ndk: r21d
+    scripts:
+      - flutter packages pub get
+      - flutter build apk --release
     artifacts:
       - build/**/outputs/apk/**/*.apk
       - build/**/outputs/bundle/**/*.aab
